@@ -11,7 +11,6 @@ import {
 import wrapNavigationAuthRoute from "../../functions/wrapNavigationAuthRoute";
 
 const WechatTab = ({navigation}) => {
-
   return (
     <SafeAreaView>
       <ScrollView
