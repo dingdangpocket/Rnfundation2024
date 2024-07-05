@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
-import React,{useContext} from 'react';
+import React, {useContext} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeTab from '../screens/tabScreens/HomeTab';
 import CommunityTab from '../screens/tabScreens/CommunityTab';
@@ -13,10 +13,10 @@ import {
   DiscoveryIconUnActive,
   CommunityIconActive,
   CommunityIconUnActive,
-  EventIconUnActive,
   EventIconActive,
-  MineIconUnActive,
+  EventIconUnActive,
   MineIconActive,
+  MineIconUnActive,
   HomeIconActive,
   HomeIconUnActive,
 } from '../icons';
@@ -89,6 +89,10 @@ const HomeTabsRoutes = () => {
           <TouchableOpacity activeOpacity={0.85} {...props} />
         ),
         headerShown: false,
+        activeTintColor: 'rgba(10,10,10,0.9)',
+        inactiveTintColor: 'rgba(10,10,10,0.5)',
+        labelStyle: {fontSize: 12},
+        style: {height: 55},
       })}>
       {HomeTabRoutesConfig.map(item => {
         return (

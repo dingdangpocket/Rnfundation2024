@@ -9,7 +9,6 @@ import {
   TextInput,
   useWindowDimensions,
   Alert,
-  ImageBackground,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';

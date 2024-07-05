@@ -16,7 +16,7 @@ import {
 const ImagePicker = () => {
     return (
         <View>
-            picker
+            <Text>访问相册</Text>
         </View>
     );
 };

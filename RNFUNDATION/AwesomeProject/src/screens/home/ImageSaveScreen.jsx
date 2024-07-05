@@ -10,7 +10,7 @@ const ImageSaveScreen = () => {
   return (
     <>
       <SafeAreaView style={styles.container}>
-        <Text>ImageSaveScreen</Text>
+        <Text>保存图片</Text>
       </SafeAreaView>
     </>
   );
