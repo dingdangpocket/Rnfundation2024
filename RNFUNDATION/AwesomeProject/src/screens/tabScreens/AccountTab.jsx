@@ -8,9 +8,10 @@ import {
   Text,
   Linking,
 } from 'react-native';
-import wrapNavigationAuthRoute from "../../functions/wrapNavigationAuthRoute";
-
+import wrapNavigationAuthRoute from '../../functions/wrapNavigationAuthRoute';
+import {ContentContext} from '../../context/ContextProvider';
 const WechatTab = ({navigation}) => {
+  const {state} = useContext(ContentContext);
   return (
     <SafeAreaView>
       <ScrollView
@@ -32,12 +33,7 @@ const WechatTab = ({navigation}) => {
             <TouchableOpacity
               style={styles.button}
               onPress={() => Linking.openURL('foundation://InfoScreen/10')}>
-              <Text>DeepLinking-InfoScreen</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => Linking.openURL('myapp://')}>
-              <Text>DeepLinking其他应用</Text>
+              <Text>Android DeepLinking-InfoScreen</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -5,22 +5,22 @@ import {containStackRoutes} from '../router/index';
 // import Login from 'src/screens/login/Login';
 import HomeTabRoutes from './HomeTabsRoutes';
 const Stack = createStackNavigator();
-// const linking = {
-//   prefixes: ['foundation://'],
-//   config: {
-//     initialRouteName: 'HomeTabs',
-//     screens: {
-//       InfoScreen: {
-//         path: 'InfoScreen/:id',
-//       },
-//     },
-//   },
-// };
+const linking = {
+  prefixes: ['foundation://'],
+  config: {
+    initialRouteName: 'HomeTabs',
+    screens: {
+      InfoScreen: {
+        path: 'InfoScreen/:id',
+      },
+    },
+  },
+};
 //linking配置交给NavigationContainer；
 
 const RoutesNav = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking}>
       <Stack.Navigator>
         {/* 将tab页装载在根节点Stack页面; */}
         <Stack.Screen

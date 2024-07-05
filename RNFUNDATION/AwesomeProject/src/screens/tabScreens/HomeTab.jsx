@@ -12,10 +12,11 @@ import {
   Alert,
   Platform,
 } from 'react-native';
-// import Geolocation from '@react-native-community/geolocation';
 import CustomButton from '../../components/CustomButton';
 import {Center} from '../../commonStyle/commonStyle';
+import {ContentContext} from '../../context/ContextProvider';
 const HomeTab = ({navigation}) => {
+  const {state, dispatch} = useContext(ContentContext);
   const [current, setCurrent] = useState(0);
   const [optionList] = useState([
     {id: 0, content: '集成'},
@@ -144,6 +145,7 @@ const HomeTab = ({navigation}) => {
     });
     Alert.alert('提示', '路由锁定成功,在账户页面中测试;', [{text: '确定'}]);
   };
+
   return (
     <View style={{flex: 1}}>
       <ScrollView horizontal={false}>

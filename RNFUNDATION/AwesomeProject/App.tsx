@@ -10,22 +10,25 @@
 import React, {useContext, useEffect} from 'react';
 import {SafeAreaView, View} from 'react-native';
 import RoutesNav from './src/components/RoutesNav';
+import {ContextProvider} from './src/context/ContextProvider';
 
 const App = () => {
   return (
-    <View style={{flex: 1}}>
-      {/* {state.safeAreaViewStatus ? (
+    <ContextProvider>
+      <View style={{flex: 1}}>
+        {/* {state.safeAreaViewStatus ? (
         <SafeAreaView
           style={{flex: 0, backgroundColor: 'rgba(255,255,255,0.7)'}}
         />
       ) : null} */}
-      <RoutesNav />
-      {/* {state.safeAreaViewStatus ? (
+        <RoutesNav />
+        {/* {state.safeAreaViewStatus ? (
         <SafeAreaView
           style={{flex: 0, backgroundColor: 'rgba(255,255,255,0.7)'}}
         />
       ) : null} */}
-    </View>
+      </View>
+    </ContextProvider>
   );
 };
 export default App;
