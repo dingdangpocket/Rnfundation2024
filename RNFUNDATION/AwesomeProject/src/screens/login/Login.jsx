@@ -14,9 +14,9 @@ import {
   Platform,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {Center} from 'src/commonStyle/commonStyle';
+import {Center} from '../../commonStyle/commonStyle';
 import {useState, useEffect} from 'react';
-import CustomButton from 'src/components/CustomButton';
+import CustomButton from '../../components/CustomButton';
 const Login = () => {
   const navigation = useNavigation();
   const {width} = useWindowDimensions();

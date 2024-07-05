@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
-import React from 'react';
+import React,{useContext} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeTab from '../screens/tabScreens/HomeTab';
 import CommunityTab from '../screens/tabScreens/CommunityTab';
@@ -34,39 +34,43 @@ const IconSet = {
   unActiveDiscoveryTab: <DiscoveryIconUnActive width="84%" height="84%" />,
 };
 const HomeTabsRoutes = () => {
+  const {state} = useContext(ContentContext);
   const HomeTabRoutesConfig = [
     {
       name: 'HomeTab',
       component: HomeTab,
-      option: {headerShown: false, title: '首页'},
+      option: {title: '首页'},
+      tabBarBadge: null,
     },
     {
       name: 'CommunityTab',
       component: CommunityTab,
       option: {title: '社区'},
+      tabBarBadge: state.communityTabBarBadge,
     },
     {
       name: 'DiscoveryTab',
       component: DiscoveryTab,
       option: {title: '探索'},
+      tabBarBadge: null,
     },
     {
       name: 'EventTab',
       component: EventTab,
       option: {title: '活动'},
+      tabBarBadge: state.eventTabBarBadge,
     },
     {
       name: 'AccountTab',
       component: AccountTab,
       option: {title: '账户'},
-      // tabBarBadge: null,
+      tabBarBadge: null,
     },
   ];
   return (
     <Tab.Navigator
       initialRouteName="HomeTab"
       detachInactiveScreens={false}
-      lazy={false}
       // sceneContainerStyle={{backgroundColor:"red"}}
       tabBarOptions={{
         activeTintColor: 'rgba(10,10,10,0.9)',
