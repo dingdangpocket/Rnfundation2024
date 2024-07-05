@@ -26,7 +26,6 @@ const HomeTab = ({navigation}) => {
     {id: 4, content: '理论'},
     {id: 5, content: '问题'},
   ]);
-  //定位-内部实现是通过HTML5的navigator;
   const [btnList] = useState([
     {
       id: 0,

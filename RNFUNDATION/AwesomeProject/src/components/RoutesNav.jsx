@@ -3,7 +3,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {containStackRoutes} from '../router/index';
 import Login from '../screens/login/Login';
-// import Login from 'src/screens/login/Login';
 import HomeTabRoutes from './HomeTabsRoutes';
 const Stack = createStackNavigator();
 const linking = {
@@ -17,7 +16,6 @@ const linking = {
     },
   },
 };
-//linking配置交给NavigationContainer；
 
 const RoutesNav = () => {
   return (
