@@ -34,7 +34,9 @@
         <data android:scheme="https" />
         <data android:host="www.baidu.com" />
       </intent-filter>
-         <!-- DeepLinkingSet -->
+      <!-- DeepLinkingSet -->
     </activity>
   </application>
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
 </manifest>

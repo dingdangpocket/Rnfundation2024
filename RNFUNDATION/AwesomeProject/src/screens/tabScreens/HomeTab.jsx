@@ -19,7 +19,7 @@ const HomeTab = ({navigation}) => {
   const {state, dispatch} = useContext(ContentContext);
   const [current, setCurrent] = useState(0);
   const [optionList] = useState([
-    {id: 0, content: '集成'},
+    {id: 0, content: '热门'},
     {id: 1, content: '精选'},
     {id: 2, content: '热门'},
     {id: 3, content: '示例'},
@@ -203,7 +203,7 @@ const HomeTab = ({navigation}) => {
             })}
           </View>
         ) : null}
-        {current == 1 ? <Text>精选</Text> : null}
+        {current == 1 ? <Text>推荐</Text> : null}
         {current == 2 ? <Text>热门</Text> : null}
         {current == 3 ? <Text>示例</Text> : null}
         {current == 4 ? <Text>理论</Text> : null}
